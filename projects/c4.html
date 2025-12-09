@@ -1,0 +1,202 @@
+<!-- Creation of an ID 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        h2{
+            color:rgb(27, 27, 27);   
+        }
+
+        h3{
+            color: rgb(27, 27, 27);
+        }
+
+        button{
+            padding: 10px;
+            border: none;
+            background-color: rgb(0, 76, 255);
+            color: azure;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: blueviolet;
+        }
+        .Profile-card{
+            width: 250px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: burlywood;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .Profile-card img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1px;
+            margin-top: -4px;
+            margin-left: 10px;
+        }
+
+        .about{
+            color: rgb(0, 76, 255);
+            font-size: 15px;
+            line-height: 15px;
+        }
+
+        .skills{
+            list-style: none;
+            
+        }
+        .skills li{
+            background-color: cornflowerblue;
+            padding: 5px;
+            margin: 2px;
+            display: inline-block;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 15;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "Profile-card">
+        <img class ="Profile-card img" src = "IMG_20251203_173306.jpg" height="300px" width="240px" alt = "Profile Pic">
+    <h2>Soham Pratap Barve</h2>
+    <h3>Third Sem CSE Student</h3>
+    <p class = "about">I am intrested in frontend development and I like playing sports</p>
+    <p class = "about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint in et at dignissimos ab officia porro ducimus quis natus! Tempora iure, fugit omnis velit dolor asperiores quibusdam non voluptatibus impedit!</p>
+
+    <h3>Skills:</h3>
+    <ul class = "skills li">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>C++</li>
+    </ul>
+    <button>Contact Me</button>
+    </div>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Profile</title>
+    <style>
+        body {
+        background-color: #dce9ff;
+        }
+
+        h2{
+            color: rgb(27, 27, 27);   
+        }
+
+        h3{
+            color: rgb(27, 27, 27);
+        }
+
+        button{
+            padding: 10px;
+            border: none;
+            background-color: rgb(0, 76, 255);
+            color: azure;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: blueviolet;
+        }
+
+        /* kept your original class name Profile-card */
+        .Profile-card{
+            width: 250px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: burlywood;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        /* target the image inside the card; also added a small fix for centering */
+        .Profile-card .profile-pic{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 8px;
+            margin-top: -4px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about{
+            color: rgb(0, 76, 255);
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        /* corrected: ul has class "skills" and li rules will apply */
+        .skills{
+            list-style: none;
+            padding: 0;
+            margin: 8px 0;
+        }
+
+        .skills li{
+            background-color: cornflowerblue;
+            padding: 5px;
+            margin: 2px;
+            display: inline-block;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 15px; /* added unit (px) */
+            color: white;
+        }
+
+        /* ensure strong/b elements look bold even with custom fonts */
+        strong, b {
+            font-weight: 700;
+        }
+
+        /* small responsive tweak so image doesn't overflow on narrow devices */
+        @media (max-width: 360px) {
+          .Profile-card { width: 92%; padding: 12px; }
+          .Profile-card .profile-pic { width: 160px; height: 160px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="profile" class="Profile-card">
+        <!-- fixed image class name and centered display -->
+        <img class="profile-pic" src="IMG_20251203_173306.jpg" height="300" width="240" alt="Profile Pic">
+
+        <h2>Soham Pratap Barve</h2>
+        <h3>Third Sem CSE Student</h3>
+
+        <p class="about">I am interested in frontend development and I like playing sports</p>
+
+        <p class="about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint in et at dignissimos ab officia porro ducimus quis natus! Tempora iure, fugit omnis velit dolor asperiores quibusdam non voluptatibus impedit!</p>
+
+        <h3>Skills:</h3>
+        <!-- corrected: ul uses "skills" class; li elements styled above -->
+        <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>C++</li>
+        </ul>
+
+        <button>Contact Me</button>
+    </div>
+</body>
+</html>
