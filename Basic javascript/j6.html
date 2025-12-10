@@ -28,16 +28,19 @@
     <script>
 
         let a = document.querySelector("h1"); //selection of an element
-        a.innerHTML = "changed" //changing HTML using JavaScript
+       // a.innerHTML = "changed" //changing HTML using JavaScript
 
         // adding css using JavaScript
         let b = document.querySelector("p"); 
-        b.style.color = "red"; // changing the color 
+        // b.style.color = "red"; // changing the color 
 
         let c = document.querySelector("button"); 
         c.addEventListener("click",function(){ // Event listner
             c.style.color = "blue";
+            a.innerHTML = "changed";
+            b.style.color = "red";
         })
+
 
 
     </script>
