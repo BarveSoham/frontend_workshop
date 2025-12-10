@@ -1,0 +1,45 @@
+<!-- DOM - document object model -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+        .button{
+            background-color: aquamarine;
+            color: black;
+            border: 1px solid black;
+            padding: 7px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1> Hello World</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        <br>Possimus, et consequatur laborum magnam nobis consequuntur ipsum alias quibusdam dignissimos enim. 
+        <br>Quibusdam ad deleniti ea, eligendi nam labore autem optio aperiam?</p>
+    <button class="button">hello</button>
+
+    <script>
+
+        let a = document.querySelector("h1"); //selection of an element
+        a.innerHTML = "changed" //changing HTML using JavaScript
+
+        // adding css using JavaScript
+        let b = document.querySelector("p"); 
+        b.style.color = "red"; // changing the color 
+
+        let c = document.querySelector("button"); 
+        c.addEventListener("click",function(){ // Event listner
+            c.style.color = "blue";
+        })
+
+
+    </script>
+</body>
+</html>
