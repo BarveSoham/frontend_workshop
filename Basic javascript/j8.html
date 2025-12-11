@@ -1,0 +1,56 @@
+<!-- Converting a JS file to a JQuery file -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: beige;
+        }
+
+        button{
+            background-color: lightblue;
+            color: black;
+            border: 5px;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id = "box">Hello World</h1>
+    <script>
+        let a = document.getElementById("box");
+        a.addEventListener("click",function(){
+            a.style.display = "none";
+            })
+
+    </script>
+
+    <button id = "change">Change colour</button>
+    <script>
+        let c = document.getElementById("change"); 
+        c.addEventListener("click",function(){
+            c.style.backgroundColor = "lightcoral";
+            c.style.color = "white";
+        })
+    </script>
+
+    <button id = "vanish"> disapear </button>
+    <script>
+        let b = document.getElementById("vanish");
+        b.addEventListener("click",function(){
+            b.style.display = "none";
+        })
+    </script>
+
+</body>
+
+</html>
