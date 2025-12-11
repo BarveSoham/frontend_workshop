@@ -1,0 +1,43 @@
+<!-- we are starting to learn JQuery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+        button{
+            background-color: lightcoral;
+            color: black;
+            border: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- this is the command to acess JQuery without downloading JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <button>Click Me !</button>
+    <script>
+        $("button").click(function(){
+            console.log (" you clicked a button"); // this comes in the console 
+        })
+
+        $("button").click(function(){
+            $("body").append("<p>You clicked the button!</p>"); // this comes in the web page 
+        });
+
+    </script>
+
+    <button id = "vanish"> vanish </button>   
+    <script>
+        $("#vanish").click(function(){
+            $("#vanish").hide();
+        })
+    </script>
+</body>
+</html>
