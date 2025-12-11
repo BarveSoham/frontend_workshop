@@ -1,37 +1,40 @@
 <!-- to add and remove border -->
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Document</title>
 </head>
+
 <body>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
-    </script>
+        </script>
 
     <h1>Welcome</h1>
     <p>This is a pragraph</p>
 
-    <div class = "box" style = "width: 120px ; height: 60px; background: lightblue; padding: 10px;"> BOX </div>
+    <div class="box" style="width: 120px ; height: 60px; background: lightblue; padding: 10px;"> BOX </div>
 
-    <button id = "add" style="margin: 15px;">add border</button>
+    <button id="add" style="margin: 15px;">add border</button>
     <script>
-        $(document).ready(function(){
-            $("#add").click(function(){
-                $("h1,p,.box").css("border","2px solid green")
+        $(document).ready(function () {
+            $("#add").click(function () {
+                $("h1,p,.box").css("border", "2px solid green")
             })
         })
     </script>
 
-    
-    <button id = "remove" style="margin: 15px;">remove border</button>
+
+    <button id="remove" style="margin: 15px;">remove border</button>
     <script>
-        $(document).ready(function(){
-            $("#remove").click(function(){
-                $("h1,p,.box").css("border","none")
+        $(document).ready(function () {
+            $("#remove").click(function () {
+                $("h1,p,.box").css("border", "none")
             })
         })
     </script>
 
 </body>
+
 </html>
