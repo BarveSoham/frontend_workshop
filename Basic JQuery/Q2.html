@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        button {
+            background-color: lightcoral;
+            color: black;
+            border: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+    <h2 id="title"> Hello </h2>
+    <button id="butn1">Click Me!</button>
+
+    <script>
+        // this is used so that JQuery starts executing after th HTML program
+
+        let click = false;
+        $(document).ready(function () {
+            $("#butn1").click(function () {
+
+                if (click == true) return;   // ignore subsequent clicks
+                click = true;
+                $("#butn1").css("background-color", "lightblue");
+                $("#butn1").css("color", "white");
+                $("#title").text("Text is changed using JQuery");
+                $("#title").css("color", "lightcoral");
+                $("body").append("<h4>This is added using JQuery</h4>");
+                if (click) return;   // ignore subsequent clicks
+                click = true;
+
+            });
+            $("#butn1").hover(
+                function () {
+                    $(this).css("background-color", "lightpink");
+                },
+                function () {
+                    $(this).css("background-color", "lightblue");
+                }
+            );
+
+        });
+    </script>
+</body>
+
+</html>
