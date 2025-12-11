@@ -1,0 +1,78 @@
+<!--we use " # " to Adress an ID and we use " . " to adress a class -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        button{
+            background-color: aqua;
+            color: black;
+            border: 5px;
+            padding : 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <h3 class="item1" style="padding: 5px;">Item 1</h3>
+    <h3 class="item2" style="padding: 5px;">Item 2</h3>
+    <h3 id="item3" style="padding: 5px;">Item 3</h3>
+
+    <button id="highlight" style="margin: auto;">highlight Items</button>
+    <!-- 
+    <script>
+        $(document).ready(function () {
+            $("#highlight").click(function () {
+                $(".item1").css("background", "skyblue");
+                $(".item2").css("background", "lightcoral"); // adressing an class
+                $("#item3").css("background", "lightpink");  // adressing an id
+                $("body").css("background","white");
+
+            })
+        })
+    </script>
+    -->
+    <script>
+        let toggle = false;
+        $(document).ready(function () {
+            $("#highlight").click(function () {
+
+                if (!toggle) {
+                    $(".item1").css("background", "skyblue");
+                    $(".item2").css("background", "lightcoral");
+                    $("#item3").css("background", "lightpink");
+                    $("body").css("background", "white");
+                    toggle = true;
+                } else {
+                    $(".item1").css("background", "beige");
+                    $(".item2").css("background", "beige");
+                    $("#item3").css("background", "beige"); // original color
+                    $("body").css("background", "beige");
+                    toggle = false;
+                }
+            });
+            $("#highlight").hover(
+                function () {
+                    $(this).css("background-color", "aquamarine");
+                },
+                function () {
+                    $(this).css("background-color", "aqua");
+                }
+            );
+        })
+
+    </script>
+
+</body>
+
+</html>
