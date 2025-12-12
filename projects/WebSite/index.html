@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Website background */
+        body {
+            background-color: #FAF8F5;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(30, 30, 30);
+            ;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #283593;
+            /* deep indigo */
+            color: rgb(30, 30, 30);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: rgb(30, 30, 30);
+            /* fixed from black */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background-color: cornflowerblue;
+            color: rgb(30, 30, 30);
+            ;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            background-color: cornflowerblue;
+            color: rgb(30, 30, 30);
+            padding: 10px 25px;
+            margin-top: 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: lightskyblue;
+            color: white;
+            box-shadow: 0px 2px 2px;
+            border: 1px solid white
+        }
+
+        nav a:hover {
+            color: aliceblue;
+            text-decoration: underline;
+            transition: 0.4s;
+        }
+
+        /* GENERAL SECTIONS */
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+            line-height: 1.8;
+            background-color: #FAF8F5;
+            font-weight: bold;
+        }
+
+        .card {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        .card:hover {
+            background-color: cornflowerblue;
+            color: aliceblue;
+            box-shadow: 0px 2px 2px darkgrey;
+            transition: 0.3s;
+            border: 1px solid black
+
+        }
+        
+
+        h2{
+            /* dark slate */
+            color: rgb(30, 30, 30);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
+            color:rgb(30, 30, 30);
+            /* soft slate text */
+        }
+
+        .cource_container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .Contact-From {
+            max-width: 500px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .Contact-From input,
+        .Contact-From textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid black
+        }
+
+        footer{
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+            padding: 15px;
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <h1>My College</h1>
+        <ul>
+            <li><a href="#cources">Courses</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h2>Welcome to the College Website</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas perspiciatis unde cum voluptatibus esse
+            asperiores iure officiis.</p>
+
+        <a href="#cources" class="btn">Explore Courses</a>
+    </section>
+
+    
+    <section id="cources" class="section">
+        <h2>Our Courses</h2>
+        <div class="cource_container">
+            <div class="card">
+                <h2 class = "card_text">B.Tech</h2>
+                <p class = "card_text">Batchlor of enineering</p>
+            </div>
+            <div class="card">
+                <h2 class = "card_text"> BBA </h2>
+                <p class = "card_text"> Batchlor of busness admin </p>
+            </div>
+            <div class="card">
+                <h2 class = "card_text"> BCA </h2>
+                <p class = "card_text"> Batchlor of computer application </p>
+                <div>
+            </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ducimus sunt voluptate nam quae. Quam nobis a perspiciatis dolores neque facilis atque minus, tempora nisi, distinctio cupiditate doloremque vero iure, nesciunt asperiores eius quis repellendus nihil at. Architecto sit, doloribus natus illo, soluta quam, exercitationem mollitia fugit pariatur quisquam adipisci!</p>
+    </section>
+
+
+    <section id="contact" class=" section ">
+
+        <h2> Contact Us </h2>
+        <form class="Contact-From">
+            <label> Name: </label>
+            <input type="text">
+
+            <label> Email: </label>
+            <input type="email">
+
+            <label> Number: </label>
+            <input type="number">
+
+            <label>Message:</label>
+            <textarea rows="1"></textarea>
+
+            <a href="#" class="btn" style="display: block; text-align: center;">Submit</a>
+        </form>
+
+    </section>
+
+    
+    <footer>
+        &copy; 2025 My Collage . All rights reserved
+    </footer>
+    
+
+</body>
+
+</html>
